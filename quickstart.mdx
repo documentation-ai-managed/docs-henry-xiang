@@ -1,0 +1,132 @@
+---
+title: Getting Started with Henry Xiang
+description: Set up your Henry Xiang account and create your first documentation space in just a few minutes.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have:
+
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- Optional: Team members' email addresses for collaboration
+
+<Callout kind="info">
+
+Henry Xiang is a web-based platform. No downloads or installations required.
+
+</Callout>
+
+## Create Your Account
+
+Follow these steps to sign up quickly.
+
+<Steps>
+  <Step title="Visit the Signup Page" icon="globe">
+    Navigate to `https://app.henryxiang.com/signup` in your browser.
+  </Step>
+  <Step title="Enter Your Details" icon="user">
+    Provide your email, full name, and a strong password. Accept the terms of service.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for a verification link from Henry Xiang and click it to activate your account.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+
+Use a business email for team accounts to unlock advanced collaboration features.
+
+</Callout>
+
+## Set Up Your First Documentation Space
+
+Once logged in, create your default space for organizing docs.
+
+<Steps>
+  <Step title="Create New Space" icon="plus">
+    Click the **New Space** button in the dashboard.
+  </Step>
+  <Step title="Configure Space" icon="settings">
+    Enter a name like "Project Docs" and select visibility: Public, Private, or Team.
+  </Step>
+  <Step title="Add First Page" icon="file-text">
+    Inside the space, create a page titled "Welcome" and start editing with the built-in Markdown editor.
+  </Step>
+</Steps>
+
+You can also initialize via API for automation:
+
+<CodeGroup tabs="JavaScript,cURL">
+  ```javascript
+  const response = await fetch('https://api.henryxiang.com/v1/spaces', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${YOUR_API_KEY}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      name: 'Project Docs',
+      visibility: 'private'
+    })
+  });
+  ```
+  ```bash
+  curl -X POST https://api.henryxiang.com/v1/spaces \
+    -H "Authorization: Bearer YOUR_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d '{"name": "Project Docs", "visibility": "private"}'
+  ```
+</CodeGroup>
+
+## Invite Collaborators
+
+Share your space with team members using these methods.
+
+<Tabs>
+  <Tab title="Web UI" icon="mouse-pointer">
+    In your space settings, go to **Members** > **Invite**. Enter emails and set roles: Editor, Viewer, or Admin.
+  </Tab>
+  <Tab title="Email Links" icon="mail">
+    Generate invite links from the share menu. Send via email with expiration dates for security.
+  </Tab>
+  <Tab title="Slack Integration" icon="message-circle">
+    Connect Slack in integrations settings. Use slash command `/henryxiang invite @user Project Docs`.
+  </Tab>
+</Tabs>
+
+## Interface Tour
+
+Get familiar with key areas:
+
+<Columns cols={3}>
+  <Card title="Editor" icon="edit-3">
+    Real-time Markdown editor with live preview and AI suggestions.
+  </Card>
+  <Card title="Spaces" icon="layers">
+    Sidebar for switching between documentation spaces.
+  </Card>
+  <Card title="Search" icon="search">
+    Global search across all pages and spaces.
+  </Card>
+</Columns>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Learn Markdown Basics" icon="book-open" href="/introduction">
+    Dive into advanced formatting and components.
+  </Card>
+  <Card title="Set Up Authentication" icon="shield" href="/authentication">
+    Secure your spaces with API keys and SSO.
+  </Card>
+  <Card title="Customization Guide" icon="palette" href="/configuration">
+    Brand your docs with custom themes.
+  </Card>
+</Columns>
+
+<Callout kind="success">
+
+Congratulations! You've set up Henry Xiang. Explore your new space and invite your team.
+
+</Callout>

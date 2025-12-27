@@ -1,0 +1,103 @@
+---
+title: Introduction to Henry Xiang
+description: Discover Henry Xiang, your default documentation space for organizing and managing all project documentation with ease and efficiency.
+---
+
+## Overview
+
+Henry Xiang provides a centralized platform where you create, organize, and manage all your project documentation. You build structured spaces for teams to collaborate seamlessly, version docs, and search content effortlessly. Start organizing your knowledge base today without complex setups.
+
+## Key Features
+
+Henry Xiang offers powerful tools tailored for documentation management. Explore these core capabilities:
+
+<Columns cols={3}>
+  <Card title="Organized Spaces" icon="folder" href="/docs/spaces">
+    Create unlimited documentation spaces for projects, teams, or products. Nest pages hierarchically for intuitive navigation.
+  </Card>
+  <Card title="Real-time Collaboration" icon="users" href="/docs/collaboration">
+    Invite team members to edit docs simultaneously with live previews and version history.
+  </Card>
+  <Card title="Advanced Search" icon="search" href="/docs/search">
+    Find any document instantly using full-text search across all spaces and versions.
+  </Card>
+</Columns>
+
+<Columns cols={2}>
+  <Card title="Version Control" icon="git-branch" href="/docs/versions">
+    Track changes with Git-like versioning, rollback anytime, and compare diffs visually.
+  </Card>
+  <Card title="Customizable Themes" icon="palette" href="/docs/themes">
+    Apply your brand colors like `#3B82F6` and customize layouts for a professional look.
+  </Card>
+</Columns>
+
+## Benefits for Teams and Projects
+
+You streamline workflows by centralizing knowledge, reducing onboarding time for new members by up to 50%. Teams collaborate without email chains or scattered files, ensuring everyone accesses the latest docs. Projects stay on track with searchable, versioned documentation that scales with growth.
+
+<Callout kind="success">
+  Teams using Henry Xiang report 40% faster documentation updates and improved project delivery.
+</Callout>
+
+## Quick Start
+
+Get up and running in minutes:
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit `https://henryxiang.com` and create your free account. No credit card required.
+  </Step>
+  <Step title="Create a Space" icon="folder-plus">
+    Click "New Space" and name it for your project, like "MyApp Docs".
+  </Step>
+  <Step title="Add Your First Page" icon="plus">
+    Start with a blank page or import from Markdown. Use the editor for rich content.
+  </Step>
+  <Step title="Invite Collaborators" icon="mail">
+    Share your space link and add team emails for instant access.
+  </Step>
+</Steps>
+
+## Quick Navigation Guide
+
+Navigate Henry Xiang efficiently using these paths:
+
+<Tabs>
+  <Tab title="Dashboard" icon="layout">
+    Access your spaces overview from `/dashboard`. View recent activity and search globally.
+  </Tab>
+  <Tab title="Spaces" icon="folders">
+    Manage all spaces at `/spaces`. Create, archive, or export entire documentation sets.
+  </Tab>
+  <Tab title="Settings" icon="settings">
+    Configure themes, integrations, and permissions under `/settings`.
+  </Tab>
+</Tabs>
+
+<CodeGroup tabs="CLI,API">
+  ```bash
+  # Install Henry Xiang CLI
+  npm install -g @henryxiang/cli
+
+  # Login and create space
+  henry login
+  henry space create "MyProject"
+  ```
+  ```javascript
+  // API example to list spaces
+  const response = await fetch('https://api.henryxiang.com/spaces', {
+    headers: { Authorization: `Bearer ${YOUR_API_KEY}` }
+  });
+  const spaces = await response.json();
+  console.log(spaces);
+  ```
+</CodeGroup>
+
+<Callout kind="tip">
+  Ready for more? Check [Quickstart](/quickstart) for advanced setup or [Authentication](/authentication) for secure access.
+</Callout>
+
+<Expandable title="Need Help?" default-open="false">
+  Visit our [Help Center](/help-center) or contact support@henryxiang.com. Common issues include space permissions—ensure you have admin rights.
+</Expandable>
